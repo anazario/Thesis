@@ -27,7 +27,7 @@ The T5tttt model consists of a pair of gluinos, where each decays into a top qua
 
 All five signal models described share similar final states containing two neutralinos and up to four top quarks. Since the neutralino is considered stable and only interacts weakly with matter, it cannot be picked up by the detector. Therefore, missing transverse momentum ($p_{T}^{miss}$) is one of the most important variables used to compare event yields between the signal and the SM background.
 
-\subsection{Top Tagger}
+\subsection{Top Tagger}\label{TopTaggerSec}
 
 The distinguishing feature of this analysis is its powerful top-tagging algorithm. It is designed to provide high reconstruction efficiency over the full range of the top quark $p_\text{T}$ for the considered SUSY signal models. This top-tagger combines the use of several different jet clustering algorithms in order to identify three different categories of top quark jets, designated as ``monojet'', ``dijet'' and ``trijet''. The tagger makes use of identified jets that were reconstructed with the anti-$k_\text{T}$\cite{AntiKt} clustering algorithms combined with additional corrections and selection criteria provided by the Cambridge--Aachen\cite{JetAlg1} and soft-drop declustering\cite{SoftDrop} algorithms. In addition, multivariate analysis (MVA) techniques, such as the random forest decision tree algorithm\cite{RandForest1}, were applied in order to further decrease the amount of reconstructed fake tops.\\
 
@@ -109,7 +109,7 @@ In order to test this method, a sideband (SB) region is selected which is orthog
 
 Systematic uncertainties stemming from the prediction of t$\bar{\text{t}}$, single top quark and W+jets background events are determined from various sources: The statistical uncertainty associated to the translation factors determined for each search region (1--40\%), the lepton reconstruction and isolation efficiency (7--43\%), the jet and $p_{\text{T}}^{miss}$ energy scale and resolution (maximum of 64\%), the ISR modeling (maximum of 13\%), the PDF's (maximum of 32\%) and the b-jet tagging efficiency (1\%).
 
-\subsection{The Z $\rightarrow\nu\bar{\nu}$ Background}
+\subsection{The Z $\rightarrow\nu\bar{\nu}$ Background}\label{ZnunuSection}
 
 The Z $\rightarrow\nu\bar{\nu}$ background is derived using simulated Z $\rightarrow\nu\bar{\nu}$ events that have been corrected for observed differences between data and simulation. In order to correctly estimate this background two scale factors are used to weigh the simulated events: $R_{norm}$ and $S_{DY}( N_j)$  which correct the normalization of the simulation and the shape of the simulated $N_j$ distribution, respectively. These scale factors are calculated from the dimuon control region which includes events with two muons and no muon or isolated track veto. In the region where $81 < m < 101$ GeV, the two muons are treated as if they were neutrinos.\\
 
