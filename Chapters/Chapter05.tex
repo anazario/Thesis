@@ -16,7 +16,7 @@ The loose $\gamma+$jets control region, as well as the photon ID/isolation selec
 
 Three different working points are provided by the CMS EGM physics object group (POG) for simple cut-based photon identification\cite{photonID}. The three working points, called loose, medium and tight, are chosen according to the requirements of the particular analysis and differ on the amount of background rejection they offer, as well as on their average photon selection efficiency. The higher the efficiency of a given ID, the lower the amount of background that is rejected, and vice-versa. \autoref{IDtable} shows the cut values that are applied to photons that are found within both the ECAL barrel and endcap range. The associated values to the efficiency and the background rejection rate are shown for each of the three different photon ID selections.\\
 
-In order to obtain the high efficiency and background rejection rates shown, a robust set of identification and isolation criteria are selected. A total of five parameters are used for this simple cut based method. For photon identification, the H/E and the $\sigma I\eta I\eta$ variables are found to provide the best results. The H/E parameter is defined as the ratio of the HCAL tower energy over the ECAL seed cluster energy. A threshold value is selected on H/E to remove background from electrons that are detected in both the ECAL and HCAL but have no reconstructed track\cite{egamma}.
+In order to obtain the high efficiency and background rejection rates shown, a robust set of identification and isolation criteria are selected. A total of five parameters are used for this simple cut based method. For photon identification, the H/E and the $\sigma I\eta I\eta$ variables are found to provide the best results. The H/E parameter is defined as the ratio of the HCAL tower energy over the ECAL seed cluster energy. A threshold value is selected on H/E to remove background from electrons that are detected in both the ECAL and HCAL but have no reconstructed track\cite{egamma}. The $\sigma I\eta I\eta$ variable is known as the photon shower shape variable and is defined in the ECAL as the energy weighted standard deviation of single crystal eta within the 5 $\times$ 5 crystals centered at the crystal with maximum energy\cite{showershape}. This variable is a key component in the identification of both electrons and photons since it provides a measure of the shower width where most of the energy has been deposited in a given ECAL crystal.
 
 \begin{table}[]
 \centering
@@ -53,7 +53,7 @@ $\sigma I\eta I\eta$ & 0.0276 & 0.0271 & 0.0271 \\ \hline
 \end{table}
 
 \subsection{Photon Selection}
-The event selection process for the $\gamma$+jets control region starts with photon candidates that have a $p_\text{T} > 200$ GeV and are within the acceptance range of the CMS ECAL (given by $|\eta| < 1.4442$ for the barrel and $1.566 < |\eta| < 2.5$ for the endcaps). The photons are subjected to pass the loose ID/isolation cuts described in \autoref{photonID} in order to remove $\sim85\%$ of the background processes and obtain a prompt photon sample that is $\sim90\%$ pure, on average. Additional restrictions include some of the same requirements imposed on the signal baseline selection discussed in \autoref{baseline}. These include $N_j \geq 4$, an $H_\text{T} > 300$ GeV, the $\Delta\phi$ requirements for leading jets and the lepton vetoes described in \autoref{lepVeto}. The lepton veto, in particular, greatly improves the prompt photon selection by removing many of the events in the simulated samples where a lepton gets misidentified as a photon.
+The event selection process for the $\gamma$+jets control region starts with photon candidates that have a $p_\text{T} > 200$ GeV and are within the acceptance range of the CMS ECAL (given by $|\eta| < 1.4442$ for the barrel and $1.566 < |\eta| < 2.5$ for the endcaps). The photons are subjected to pass the loose ID/isolation cuts described in \autoref{photonID} in order to remove $\sim85\%$ of the background processes and obtain a prompt photon sample that is $\sim90\%$ pure, on average. Additional restrictions include some of the same requirements imposed on the signal baseline selection discussed in \autoref{baseline}. These include $N_j \geq 4$, an $H_\text{T} > 300$ GeV, the $\Delta\phi$ requirements for leading jets and the lepton vetoes described in \autoref{lepVeto}. The lepton veto, in particular, greatly improves the prompt photon selection by removing many of the events in the simulated samples where a lepton gets misidentified as a photon.\\
 
 \begin{figure}[tb]
 \begin{center}
@@ -231,7 +231,29 @@ In this section the results for the final estimation of the of the Z$\rightarrow
 
 \subsection{Systematics}\label{systematics}
 
-Two types of uncertainties are 
+Two categories of uncertainties for the Z$\rightarrow\nu\bar{\nu}$ prediction are considered: uncertainties that are associated to the use of MC simulation and the uncertainties specifically associated to the background prediction method. Several sources are acknowledged in the first category mentioned such as PDF and renormalization/factorization scale choices, jet and $p_\text{T}^{miss}$ energy scale uncertainties b-tag scale factor uncertainties, and trigger efficiency uncertainties. Given that the simulation sample is normalized to data in the tight control region, uncertainties associated with the luminosity and cross-section are excluded. In addition, the overall Z$\rightarrow\nu\bar{\nu}$ statistical uncertainty from MC simulation is also taken into account.\\
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{UncZnunu}
+\end{center}
+\vspace{-1em}
+\caption{Systematic uncertainty in the final prediction, as a function of the search bin, associated to the MC statistics.}
+\label{UncZnunu}
+\end{figure}
+
+The statistical uncertainty associated with each bin in the MC is propagated as a systematic uncertainty. The relative uncertainty per bin can be see in \autoref{UncZnunu}. As can be seen, the uncertainties for the MC vary from as low as 1\% up to 81\% and even 100\% in some regions. Since the final estimation is scaled using the global normalization factor from the tight $\mu\mu$ control region ($R_{norm}$), the total uncertainty, due to limited amounts of events in data, is propagated in the final prediction. This is also true for the $S_\gamma$($N_j$) scale factor, in which the residual differences in search variables other than $N_j$ are evaluated in the loose photon control region. Both the uncertainty arising from the $N_j$ re-weighting as well as the residual differences are evaluated together. The uncertainty from $R_{norm}$ is propagated as a flat value of 7.9\% uncertainty per each search bin.\\
 
 \subsection{Z$\rightarrow\nu\bar{\nu}$ Estimation for the Search Bins}
+
+The final estimation for the Z$\rightarrow\nu\bar{\nu}$ background calculated for all 84 search bins is shown in \autoref{results}. The statistical uncertainty in bins that have zero events is treated as the average weight (the sum of the weights squared over the weight) times the poisson error on 0 which is 1.8. This average weight is calculated on the basis of a relaxed cut in which $N_b \geq 2$ is required. For comparison, a cut in which $N_t > 2$ where two tops are fake for the Z$\rightarrow\nu\bar{\nu}$ is used.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Results.png}
+\end{center}
+\vspace{-1em}
+\caption{Z$\rightarrow\nu\bar{\nu}$ background prediction for all search bins, including the breakdown of the various uncertainties.}
+\label{results}
+\end{figure}
 
