@@ -49,13 +49,13 @@ Efficiency $= \dfrac{\text{Number of generator-level top quarks matched to a tag
 The top quark candidates are required to be within $|\eta| < 2.0$. Furthermore, a cone size of $\Delta R < 0.4$ is used to match the reconstructed top quark to the generated-level top quark. The average misidentification rate as a function of the $p_\text{T}^{miss}$ is found to be around 20\% for simulated Z($\nu\bar{\nu}$)+jets events with a selection criteria similar to the one applied to data: $N_j \geq 4$, $N_b \geq 1$, $p_\text{T}^{miss} > 250$ GeV and no isolated electron or muon with $p_\text{T} > 10$ GeV.
 
 
-\subsection{Lepton and Track Vetoes}
+\subsection{Lepton and Track Vetoes}\label{lepVeto}
 
 Since the search only involves models with purely hadronic final states, events which contain electrons or muons are vetoed. This requires the isolation of the muon/electron candidates to a cone size of $\Delta R < 0.2$ for $p_\text{T} \leq 50$ GeV and 0.05 for $\geq 200$ GeV. This $\Delta R$ requirement decreases inversely to the lepton $p_\text{T}$ in the range $50 < p_\text{T} < 200$ GeV in order to account for the collimation of a heavy object's decay products as its Lorentz boost increases. The electron and muon objects are considered to be isolated when their relative isolation\footnote{The ratio between the isolation sum and the candidate $p_\text{T}$.} is less than 0.1 and 0.2, respectively. Due to contributions from pileup, the isolation sum is corrected using an estimate of the amount of pileup energy in the cone.\\
 
 The events that manage to pass the lepton veto are subjected to undergo an isolated charged-particle track veto. The purpose of this veto is to suppress events which contain $\tau$ leptons that decay hadronically or misidentified electrons and muons. The track requirements for this veto are $p_\text{T} > 5$ GeV, $|\eta| < 2.5$ and a relative track isolation less than 0.2. In addition, the isolated track veto is only applied when the transverse mass of an isolated track-$\vec{p}_\text{T}^{miss}$ is $m_\text{T} < 100$ GeV, consistent with W boson decays. This veto successfully reduces the background of leptonically decaying W bosons by about 40\%.
 
-\subsection{Baseline Event Selection}
+\subsection{Baseline Event Selection}\label{baseline}
 
 The data selection process begins with the triggers and follows with a pre-selection and the definition of the search bins. The selection criteria applied is optimized for high trigger efficiency as well as being sensitive to a variety of new-physics scenarios. The events selected from data meet the following baseline conditions:\\
  
@@ -105,7 +105,7 @@ The total predicted amount of lost-lepton and $\tau_\text{h}$ events in any give
 	\end{center}
 \end{figure}
 
-In order to test this method, a sideband (SB) region is selected which is orthogonal to the search region. This region is defined by the same selection criteria applied to data except for $N_t = 0$, $N_b \geq 2$, and $\Delta\phi$($p_{T}^{miss}$,  j$_\text{1,2,3,4}$)$~> 0.5$, where the last two requirements are applied in order to suppress contributions from Z($\nu\bar{\nu}$)+jets and QCD multijet processes. The SB is divided into four intervals of $p_{T}^{miss}$, where the contribution of lost-lepton and $\tau_\text{h}$ to the corresponding intervals are determined by multiplying the appropriate single-electron and single-muon CS (\autoref{LL}) by a translation factor from simulation. The contribution to the SB from other backgrounds, such as Z+jets, QCD multijet and rare events, is estimated directly from simulation. The total SM background prediction is found to agree with the data within uncertainty, confirming the validity of the translation factor procedure.\\
+In order to test this method, a sideband (SB) region is selected which is orthogonal to the search region. This region is defined by the same selection criteria applied to data except for $N_t = 0$, $N_b \geq 2$, and $\Delta\phi$($p_{T}^{miss}$,  j$_\text{1,2,3,4}$)$~> 0.5$, where the last two requirements are applied in order to suppress contributions from Z($\nu\bar{\nu}$)+jets and QCD multijet processes. The SB is divided into four intervals of $p_{T}^{miss}$, where the contribution of lost-lepton and $\tau_\text{h}$ to the corresponding intervals are determined by multiplying the appropriate single -electron and single-muon CS (\autoref{LL}) by a translation factor from simulation. The contribution to the SB from other backgrounds, such as Z+jets, QCD multijet and rare events, is estimated directly from simulation. The total SM background prediction is found to agree with the data within uncertainty, confirming the validity of the translation factor procedure.\\
 
 Systematic uncertainties stemming from the prediction of t$\bar{\text{t}}$, single top quark and W+jets background events are determined from various sources: The statistical uncertainty associated to the translation factors determined for each search region (1--40\%), the lepton reconstruction and isolation efficiency (7--43\%), the jet and $p_{\text{T}}^{miss}$ energy scale and resolution (maximum of 64\%), the ISR modeling (maximum of 13\%), the PDF's (maximum of 32\%) and the b-jet tagging efficiency (1\%).
 
@@ -151,7 +151,9 @@ Exclusion limits are calculated for each of the signal models discussed in this 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.55\textwidth]{T2ttLimit.png} 
-		\caption{The 95\% CL upper limit on the production cross section of the T2tt simplified model as a function of the top squark and LSP masses. The solid black curves represent the observed exclusion contour with respect to NLO+NLL\cite{NLONLL} signal cross sections and the change in this contour due to variation of these cross sections within their theoretical uncertainties. The dashedred curves indicate the mean expected exclusion contour and the region containing 68\% of thedistribution of expected exclusion limits under the background-only hypothesis.}\label{T2ttLimit}
+		\caption{The 95\% CL upper limit on the production cross section of the T2tt simplified model as a function of the top squark and LSP masses. The solid black curves represent the observed exclusion contour with respect to NLO+NLL\cite{NLONLL} signal cross sections and the change in this contour due to variation of these cross sections within their theoretical uncertainties. The dashed
+red curves indicate the mean expected exclusion contour and the region containing 68\% of the
+distribution of expected exclusion limits under the background-only hypothesis.}\label{T2ttLimit}
 	\end{center}
 \end{figure}
 
