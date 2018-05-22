@@ -10,13 +10,15 @@
 \usepackage{indentfirst}
 \usepackage{verbatim}
 \usepackage{float}
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
+\usepackage{subfigure}
 \usepackage{titlesec}
 \usepackage[font={footnotesize}]{caption}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{cite}
 \usepackage{url}
+\usepackage{xfrac}
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{siunitx}
@@ -29,6 +31,7 @@
     citecolor=blue,
     urlcolor=blue
 ]{hyperref}
+\usepackage[nameinlink]{cleveref}
 
 \linenumbers
 
@@ -93,19 +96,22 @@ Abstract goes here
 \chapter{Introduction}
 \input{chapters/introduction}
 
-\chapter{Large Hadron Collider and the Compact Muon Solenoid}
+\chapter{Large Hadron Collider and the Compact Muon Solenoid}\label{LHCCMS}
 \input{chapters/chapter03}
 
-\chapter{Theoretical Background}
+\chapter{Theoretical Background}\label{theory}
 \input{chapters/chapter02}
+
+\chapter{Optimizing the Phase-2 Pixel Geometry for the Level-1 Trigger in the Outer Tracker}\label{stubs}
+\input{chapters/stubsChapter}
 
 \chapter{Search for SUSY in the 0-Lepton Final State}\label{AnalysisChap}
 \input{chapters/chapter04}
 
-\chapter{Estimation of the Z$\rightarrow \nu\bar{\nu}$ Background}
+\chapter{Estimation of the Z$\rightarrow \nu\bar{\nu}$ Background}\label{estimation}
 \input{chapters/chapter05}
 
-\chapter{Conclusion}
+\chapter{Conclusion}\label{conclusion}
 \input{chapters/conclusion}
 
 \appendix

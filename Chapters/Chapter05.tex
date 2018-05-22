@@ -53,34 +53,26 @@ $\sigma I\eta I\eta$ & 0.0276 & 0.0271 & 0.0271 \\ \hline
 \end{table}
 
 \subsection{Photon Selection}
-The event selection process for the $\gamma$+jets control region starts with photon candidates that have a $p_\text{T} > 200$ GeV and are within the acceptance range of the CMS ECAL (given by $|\eta| < 1.4442$ for the barrel and $1.566 < |\eta| < 2.5$ for the endcaps). The photons are subjected to pass the loose ID/isolation cuts described in \autoref{photonID} in order to remove $\sim85\%$ of the background processes and obtain a prompt photon sample that is $\sim90\%$ pure, on average. Additional restrictions include some of the same requirements imposed on the signal baseline selection discussed in \autoref{baseline}. These include $N_j \geq 4$, an $H_\text{T} > 300$ GeV, the $\Delta\phi$ requirements for leading jets and the lepton vetoes described in \autoref{lepVeto}. The lepton veto, in particular, greatly improves the prompt photon selection by removing many of the events in the simulated samples where a lepton gets misidentified as a photon.\\
+The event selection process for the $\gamma$+jets control region starts with photon candidates that have a $p_\text{T} > 200$ GeV and are within the acceptance range of the CMS ECAL (given by $|\eta| < 1.4442$ for the barrel and $1.566 < |\eta| < 2.5$ for the endcaps). The photons are subjected to pass the loose ID/isolation cuts described in \autoref{photonID} in order to remove $\sim85\%$ of the background processes and obtain a prompt photon sample that is $\sim90\%$ pure, on average. Additional restrictions include some of the same requirements imposed on the signal baseline selection discussed in \autoref{baseline}. These include $N_j \geq 4$, an $H_\text{T} > 300$ GeV, the $\Delta\phi$ requirements for leading jets and the lepton vetoes described in \autoref{lepVeto}. The lepton veto, in particular, greatly improves the prompt photon selection by removing many of the events in the simulated samples where a lepton gets misidentified as a photon.
 
-\begin{figure}[tb]
-\begin{center}
-\begin{minipage}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{dataMC_MetGamma_LooseLepVeto.pdf}
-\end{minipage}
-\begin{minipage}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{dataMC_Photon_met_LooseLepVeto.pdf}
-\end{minipage}
-\end{center}
-%\end{figure}
-%\vspace{-3em}
-%\begin{figure}[H]
+\begin{figure}[H]
 \begin{center}
 \begin{minipage}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{dataMC_PhotonPt_LooseLepVeto.pdf}
 \end{minipage}
 \begin{minipage}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{dataMC_Photon_ht_LooseLepVeto.pdf}
+    \includegraphics[width=\textwidth]{dataMC_MetGamma_LooseLepVeto.pdf}
 \end{minipage}
 \end{center}
-\vspace{-1.5em}
-\caption{Data/MC comparison plots for $p_\text{T}^{\gamma(miss)}$ (top left), $p_\text{T}^{miss}$ (top right), Photon $p_\text{T}$ (lower left) and H$_\text{T}$ (lower right) in the control region. The yields for each background are shown for each background, next to their respective names.}
-\label{dataMCpho}
+\vspace{-1em}
+\caption{Shown are both the $p_\text{T}^{\gamma}$ (left) and $p_\text{T}^{\gamma (miss)}$ (right) distributions before applying any corrections. $p_\text{T}^{\gamma (miss)}$ is obtained by adding the $p_\text{T}^{\gamma}$ to the total $p_\text{T}^{miss}$ in every event.}
+\label{PtMetPt}
 \end{figure}
+\vspace{1em}
 
-The main contributions from simulation arise from the $\gamma+$jets, QCD and to a lesser extent, t$\bar{\text{t}}\gamma$. Other non-dominant backgrounds in the control region include contributions from W($l\nu$)+jets, t$\bar{\text{t}}$, Diboson, tW, t$\bar{\text{t}}$Z and rare processes. Most of these lesser backgrounds are nearly negligible (several orders of magnitude lower than the dominant backgrounds) and are considered to be mostly composed of fake photons. In addition to the cuts described, all of the simulation samples are subjected to weights that apply corrections to pileup as well as the b-tagging efficiency. Data, on the other hand, is obtained from a sample that contains events with at least one identified photon. Photons in this sample are also subjected to the high-level trigger HLT\_Photon175, which restricts the selection to photons that have a $p_\text{T} >$ 175 GeV. Both simulation and data are subjected to the same selection criteria established in this section. \autoref{dataMCpho} shows the ratio of data and MC for four of the analysis variables. The simulated backgrounds are stacked in order of ascending contribution.
+To further emulate the Z$\rightarrow\nu\bar{\nu}$+jets background, a variable in which the photons are treated as $p_\text{T}^{miss}$ is defined. We call this variable $p_\text{T}^{\gamma (miss)}$ and we obtain it by adding the $p_\text{T}^{\gamma}$ for every event to the total $p_\text{T}^{miss}$ in the event. Both the $p_\text{T}^{\gamma}$ and the resulting $p_\text{T}^{\gamma (miss)}$ distributions are shown in \autoref{PtMetPt} as data/MC comparison plots, where the simulated backgrounds are stacked in order of ascending contribution.\\
+
+The main contributions from simulation arise from the $\gamma+$jets, QCD and to a lesser extent, t$\bar{\text{t}}\gamma$. Other non-dominant backgrounds in the control region include contributions from W($l\nu$)+jets, t$\bar{\text{t}}$, Diboson, tW, t$\bar{\text{t}}$Z and rare processes. Most of these lesser backgrounds are nearly negligible (several orders of magnitude lower than the dominant backgrounds) and are considered to be mostly composed of fake photons. In addition to the cuts described, all of the simulation samples are subjected to weights that apply corrections to pileup as well as the b-tagging efficiency. Data, on the other hand, is obtained from a sample that contains events with at least one identified photon. Photons in this sample are also subjected to the high-level trigger HLT\_Photon175, which restricts the selection to photons that have a $p_\text{T} >$ 175 GeV. Both simulation and data are subjected to the same selection criteria established in this section. 
 
 \subsection{Photon Purity and Fake Rate}\label{purity&fakerate}
 
@@ -88,20 +80,26 @@ Three different types of photons make up the $\gamma+$jets CS: prompt photons, p
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=1.0\textwidth]{Fake+PurityPt100AccLoose}
+\begin{minipage}[b]{0.49\textwidth}
+\includegraphics[width=\textwidth]{FakeRate_empty.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{Purity_empty.pdf}
+\end{minipage}
 \end{center}
 \vspace{-1em}
 \caption{Plots for Fake Rate (left) and Purity (right) as a function of the photon $p_\text{T}$ are shown. The events are selected are required to have a $p_\text{T} > 200$ GeV, be within the ECAL acceptance range, and pass the loose ID selection cuts. This selection was produced in order to verify the values given by the E/$\gamma$ POG. As can be seen, the efficiency (purity) is seen to agree with the values of the loose photon ID/isolation selection.}
 \label{FakeRatePurityLoose}
 \end{figure}
 
-\vspace{1em}
-
-In order to identify prompt photons, reconstructed photons from the $\gamma+$jets and QCD samples are matched to generator-level photons in space and momentum by requiring $\Delta R(\gamma_\text{gen},\gamma_\text{reco}) < 0.4$ and $0.5 < p_\text{T}^\text{gen}/p_\text{T}^\text{reco} < 2.0$, respectively. Any reconstructed photon which fails to get matched to a generator level photon is labeled as a fake/non-prompt photon. Direct photons are identified by further requiring that the reconstructed photons be matched to a parton (a gluon or quark) in space as $\Delta R(\gamma,\text{parton}) > 0.4$. This requirement is intended to distinguish the reconstructed photons from highly boosted $\pi^0$'s, which compose a large portion of the experimentally indistinguishable fragmentation photons. Finally, fragmentation photons are obtained exclusively from QCD simulation and are required to have $\Delta R(\gamma,\text{parton}) < 0.4$ in order to avoid double counting photons from the $\gamma+$jets sample.
-
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=1.0\textwidth]{FakeRatePurityCR}
+\begin{minipage}[b]{0.49\textwidth}
+\includegraphics[width=\textwidth]{FakeRate_LooseLepVeto.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{Purity_LooseLepVeto.pdf}
+\end{minipage}
 \end{center}
 \vspace{-1em}
 \caption{Plots for Fake Rate (left) and Purity (right) as a function of the photon $p_\text{T}$ are shown. These plots include photons with the full control region selection. Aside from exhibiting lower statistics, the plots seem to agree with the fake rate and purity before all the control region cuts are applied.}
@@ -109,6 +107,8 @@ In order to identify prompt photons, reconstructed photons from the $\gamma+$jet
 \end{figure}
 
 \vspace{1em}
+
+In order to identify prompt photons, reconstructed photons from the $\gamma+$jets and QCD samples are matched to generator-level photons in space and momentum by requiring $\Delta R(\gamma_\text{gen},\gamma_\text{reco}) < 0.4$ and $0.5 < p_\text{T}^\text{gen}/p_\text{T}^\text{reco} < 2.0$, respectively. Any reconstructed photon which fails to get matched to a generator level photon is labeled as a fake/non-prompt photon. Direct photons are identified by further requiring that the reconstructed photons be matched to a parton (a gluon or quark) in space as $\Delta R(\gamma,\text{parton}) > 0.4$. This requirement is intended to distinguish the reconstructed photons from highly boosted $\pi^0$'s, which compose a large portion of the experimentally indistinguishable fragmentation photons. Finally, fragmentation photons are obtained exclusively from QCD simulation and are required to have $\Delta R(\gamma,\text{parton}) < 0.4$ in order to avoid double counting photons from the $\gamma+$jets sample.\\
 
 With all three types of photons defined, a study can be carried out from simulation to estimate their respective contributions to the defined control region. The study takes into account that any reconstructed photon in the $\gamma+$jets or QCD samples can only be categorized as prompt (through direct production or fragmentation) or non-prompt (fake). The purity and fake rate can then be defined in terms of the relative proportions of prompt or non-prompt photons with respect to the sum of the contributions from all three types of photons. Identified direct photons are taken from the $\gamma+$jets sample exclusively. Meanwhile, the fragmentation and fake photon contributions are taken from the QCD sample. The three quantities are then added together and their respective contributions are determined in terms of the photon $p_\text{T}$ (\autoref{FakeRatePurityLoose}).
 
@@ -150,7 +150,7 @@ Events are selected from data samples that contain exactly two oppositely charge
 
 \section{Analysis}
 
-In this section a detailed explanation of the calculation of the scale factors for both shape and normalization corrections is provided. The following methods make use of the $\gamma+$jets and the $\mu\mu$ control regions defined in the previous sections. The procedure involves extracting the shape corrections $S_\gamma$ from the $\gamma+$jets control region and afterwards obtain a single normalization correction factor $R_{norm}$ from the tight $\mu\mu$ control region. Both factors will then be applied to the final prediction of the Z$\rightarrow\nu\bar{\nu}$ background in each of the required search bins. 
+In this section a detailed explanation of the calculation of the scale factors for both shape and normalization corrections is provided. The following methods make use of the loose $\gamma+$jets and the tight $\mu\mu$ control regions defined in the previous sections. The procedure involves extracting the shape corrections $S_\gamma$ from the $\gamma+$jets control region and afterwards obtain a single normalization correction factor $R_{norm}$ from the tight $\mu\mu$ control region. Both factors will then be applied to the final prediction of the Z$\rightarrow\nu\bar{\nu}$ background in each of the required search bins. 
 
 \subsection{Shape Correction Using the $\gamma$ + jets Control Sample}
 
@@ -178,20 +178,52 @@ In order to obtain the shape corrections, the ratio between data and simulation 
 	%\end{equation}
 \endgroup
 
-\noindent where i denotes any given bin in the $N_j$ distribution. The final shape correction factors $S^{i}_{\gamma}$ are displayed graphically in INSERTPLOT for each $N_j$ bin. These factors correct for differences in both the jet multiplicity shape and overall normalization of the loose region. INSERTPLOT shows the $N_j$ distribution after the calculated scale factors have been applied. The $S_{\gamma}$ correction will be applied to the Z$\rightarrow\nu\bar{\nu}$ simulation final prediction for each of the analysis search bins. The uncertainty associated with the scale factor is estimated from the event yields in the loose photon control region. This uncertainty will form part of the total systematic uncertainty in the final prediction.
+\noindent where i denotes any given bin in the $N_j$ distribution. The final shape correction factors $S^{i}_{\gamma}$ are displayed graphically in \autoref{NjetsCR} (right) for each $N_j$ bin. These factors correct for differences in both the jet multiplicity shape and overall normalization of the loose region. INSERTPLOT shows the $N_j$ distribution in the tight $\mu\mu$ control region after the calculated scale factors have been applied. The $S_{\gamma}$ correction will be applied to the Z$\rightarrow\nu\bar{\nu}$ simulation final prediction for each of the analysis search bins. The uncertainty associated with the scale factor is estimated from the event yields in the loose photon control region. This uncertainty will form part of the total systematic uncertainty in the final prediction.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{dataMC_Photon_nj_LooseLepVeto.pdf}
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[width=0.94\textwidth]{dataMC_Photon_nj_Log_LooseLepVeto.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{ShapeCorr_LooseLepVeto.pdf}
+\end{minipage}
 \end{center}
 \vspace{-1em}
-\caption{Jet multiplicity in the loose photon control region before any corrections are applied.}
+\caption{Jet multiplicity and the associated S$_\gamma$ scale factor in the loose photon control region before any corrections are applied.}
 \label{NjetsCR}
 \end{figure}
 
 \vspace{1em}
 
 The effect of the $S_{\gamma}$($N_j$) scale factor is shown for various distributions. These results show that the overall agreement between data and simulation improves after applying the corresponding shape corrections.
+
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dataMC_PhotonPt_Wgt_LooseLepVeto.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dataMC_MetGamma_Wgt_LooseLepVeto.pdf}
+\end{minipage}
+\end{center}
+\vspace{-1em}
+\caption{$p_\text{T}^\gamma$ (left) and $p_\text{T}^{\gamma (miss)}$ (right) distributions after applying the $S_\gamma$($N_j$) scale factor. Comparing to \autoref{PtMetPt}, an improvement in the agreement between data/MC can be observed.}
+\label{PtMetPtCorr}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dataMC_Photon_nb_Log_LooseLepVeto.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dataMC_Photon_nb_Log_Wgt_LooseLepVeto.pdf}
+\end{minipage}
+\end{center}
+\vspace{-1em}
+\caption{$N_b$ distribution before (left) and after (right) applying the $S_\gamma$($N_j$) scale factor. }
+\end{figure}
 
 \subsection{Normalization Correction Using the Z$\rightarrow\mu^{+}\mu^{-}$ Control Sample}
 
@@ -210,7 +242,7 @@ In order to constrain the normalization of the Z$\rightarrow\nu\bar{\nu}$ simula
 \includegraphics[width=\textwidth]{Rnorm1}
 \end{center}
 \vspace{-1em}
-\caption{Shown are data/MC comparisons for the $p_\text{T}^{miss}$ (left) and $H_\text{T}$ (right) distributions after applying both the $N_j$-dependent shape corrections ($S_\gamma$) and the global normalization scale factor ($R_{norm}$)}.
+\caption{Shown are data/MC comparisons for the $p_\text{T}^{miss}$ (left) and $H_\text{T}$ (right) distributions after applying both the $N_j$-dependent shape corrections ($S_\gamma$) and the global normalization scale factor ($R_{norm}$).}
 \label{Rnorm1}
 \end{figure}
 
@@ -221,7 +253,7 @@ Data/MC comparisons are shown in \autoref{Rnorm1} and \autoref{Rnorm2} after app
 \includegraphics[width=\textwidth]{Rnorm2}
 \end{center}
 \vspace{-1em}
-\caption{Shown are data/MC comparisons for the $N_j$ (left) and $N_b$ (right) distributions after applying both the $N_j$-dependent shape corrections ($S_\gamma$) and the global normalization scale factor ($R_{norm}$)}
+\caption{Shown are data/MC comparisons for the $N_j$ (left) and $N_b$ (right) distributions after applying both the $N_j$-dependent shape corrections ($S_\gamma$) and the global normalization scale factor ($R_{norm}$).}
 \label{Rnorm2}
 \end{figure}
 
@@ -242,7 +274,7 @@ Two categories of uncertainties for the Z$\rightarrow\nu\bar{\nu}$ prediction ar
 \label{UncZnunu}
 \end{figure}
 
-The statistical uncertainty associated with each bin in the MC is propagated as a systematic uncertainty. The relative uncertainty per bin can be see in \autoref{UncZnunu}. As can be seen, the uncertainties for the MC vary from as low as 1\% up to 81\% and even 100\% in some regions. Since the final estimation is scaled using the global normalization factor from the tight $\mu\mu$ control region ($R_{norm}$), the total uncertainty, due to limited amounts of events in data, is propagated in the final prediction. This is also true for the $S_\gamma$($N_j$) scale factor, in which the residual differences in search variables other than $N_j$ are evaluated in the loose photon control region. Both the uncertainty arising from the $N_j$ re-weighting as well as the residual differences are evaluated together. The uncertainty from $R_{norm}$ is propagated as a flat value of 7.9\% uncertainty per each search bin.\\
+The statistical uncertainty associated with each bin in the MC is propagated as a systematic uncertainty. The relative uncertainty per bin can be see in \autoref{UncZnunu}. As can be seen, the uncertainties for the MC vary from as low as 1\% up to 81\% and even 100\% in some regions. Since the final estimation is scaled using the global normalization factor from the tight $\mu\mu$ control region ($R_{norm}$), the total uncertainty, due to limited amounts of events in data, is propagated in the final prediction. This is also true for the $S_\gamma$($N_j$) scale factor, in which the residual differences in search variables other than $N_j$ are evaluated in the loose photon control region. Both the uncertainty arising from the $N_j$ re-weighting as well as the residual differences are evaluated together. The uncertainty from $R_{norm}$ is propagated as a flat value of 7.9\% uncertainty per each search bin.
 
 \subsection{Z$\rightarrow\nu\bar{\nu}$ Estimation for the Search Bins}
 
